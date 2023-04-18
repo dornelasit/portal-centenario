@@ -144,9 +144,9 @@ if(isset($_GET['comp'])){
                         						<?php 
                         						foreach ($dadosPagamentoBenfeitorias as $pagamentoBenfeitoria){
                         						?>
-                        						<tr id="linha_<?php echo $pagamentoBenfeitoria->getNumeroLote(); ?>" style="background-color: <?php echo $pagamentoBenfeitoria->getCorLinha(); ?>">
+                        						<tr id="linha_<?php echo $pagamentoBenfeitoria->getNumeroLote()."_".$benfeitoria->id; ?>" style="background-color: <?php echo $pagamentoBenfeitoria->getCorLinha(); ?>">
                         							<td class="text-center">
-                        								<input id="contribui_<?php echo $pagamentoBenfeitoria->getNumeroLote(); ?>"
+                        								<input id="contribui_<?php echo $pagamentoBenfeitoria->getNumeroLote()."_".$benfeitoria->id; ?>"
                         							    	   onchange="atualizarReceitaBenfeitoria(<?php echo $pagamentoBenfeitoria->getNumeroLote() .",". $benfeitoria->id .",0,'".$pagamentoBenfeitoria->getCorLinha()."', true"; ?>);" 
                         							    	   type="checkbox" <?php echo $pagamentoBenfeitoria->getPago() ? "checked": null; ?>>
                         							</td>
@@ -156,7 +156,7 @@ if(isset($_GET['comp'])){
                         							<td class="text-left"><?php echo $pagamentoBenfeitoria->getNome(); ?></td>
                         							
                         							<td class="text-left">
-                        								<input id="data_pagto_<?php echo $pagamentoBenfeitoria->getNumeroLote(); ?>" 
+                        								<input id="data_pagto_<?php echo $pagamentoBenfeitoria->getNumeroLote()."_".$benfeitoria->id; ?>" 
                         									   type="date"
                         									   value="<?php echo $pagamentoBenfeitoria->getDataPagamento(); ?>"    									   
                         									   onblur="atualizarReceitaBenfeitoria(<?php echo $pagamentoBenfeitoria->getNumeroLote() .",". $benfeitoria->id .",0,'".$pagamentoBenfeitoria->getCorLinha()."', false"; ?>);"
@@ -165,7 +165,7 @@ if(isset($_GET['comp'])){
                         							
                         							<td class="text-center">
                         								<input type="text" 
-                        									   id="valor_pagto_<?php echo $pagamentoBenfeitoria->getNumeroLote(); ?>" 
+                        									   id="valor_pagto_<?php echo $pagamentoBenfeitoria->getNumeroLote()."_".$benfeitoria->id; ?>" 
                         									   class="dinheiro" 
                         									   value="<?php echo $pagamentoBenfeitoria->getValorPago(); ?>"
                         									   onblur="atualizarReceitaBenfeitoria(<?php echo $pagamentoBenfeitoria->getNumeroLote() .",". $benfeitoria->id .",0,'".$pagamentoBenfeitoria->getCorLinha()."', false"; ?>);"

@@ -1,7 +1,7 @@
 <?php
 # Constantes
 define('PORTAL_NAME','Portal Jd Centenário - O Portal do nosso bairro');
-define('APP_VERSION','1.2_0 - 17/04/23');
+define('APP_VERSION','1.2_1 - 18/04/23');
 # Timezone da aplicacao
 define('SERVER_TIMEZONE', 'America/Sao_Paulo');
 # Ambiente: TESTE ou PRODUCAO

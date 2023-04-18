@@ -58,14 +58,14 @@ function excluirBenfeitoria(_id){
 
 function atualizarReceitaBenfeitoria(_id, _idBenfeitoria, _valorDefault, _corLinha, _isInsert){
 	
-	let _pago = document.getElementById('contribui_'+_id).checked;
-	let _dataPagto = $('#data_pagto_'+ _id).val();
+	let _pago = document.getElementById('contribui_'+_id+'_'+_idBenfeitoria).checked;
+	let _dataPagto = $('#data_pagto_'+ _id +'_'+_idBenfeitoria).val();
 	
 	if(_pago){
 		
-		document.getElementById('linha_'+ _id).style.backgroundColor = '#daebc3';
-		document.getElementById('data_pagto_'+ _id).style.display  = "block";
-		document.getElementById('valor_pagto_'+ _id).style.display = "block";
+		document.getElementById('linha_'+ _id +'_'+_idBenfeitoria).style.backgroundColor = '#daebc3';
+		document.getElementById('data_pagto_'+ _id +'_'+_idBenfeitoria).style.display  = "block";
+		document.getElementById('valor_pagto_'+ _id +'_'+_idBenfeitoria).style.display = "block";
 		
 		if(_dataPagto == '' || _dataPagto == undefined){
 			
@@ -82,27 +82,27 @@ function atualizarReceitaBenfeitoria(_id, _idBenfeitoria, _valorDefault, _corLin
 			}
 
 			_dataPagto = hoje.getFullYear() +'-'+ _mes + '-' + _dia;
-			$('#data_pagto_'+ _id).val(_dataPagto);
+			$('#data_pagto_'+ _id +'_'+_idBenfeitoria).val(_dataPagto);
 		} 
 		
-		if($('#valor_pagto_'+ _id).val() == ''   || 
-		   $('#valor_pagto_'+ _id).val() == null ||
-		   $('#valor_pagto_'+ _id).val() == undefined){
+		if($('#valor_pagto_'+ _id +'_'+_idBenfeitoria).val() == ''   || 
+		   $('#valor_pagto_'+ _id +'_'+_idBenfeitoria).val() == null ||
+		   $('#valor_pagto_'+ _id +'_'+_idBenfeitoria).val() == undefined){
 		
-			$('#valor_pagto_'+ _id).val(_valorDefault);		
+			$('#valor_pagto_'+ _id +'_'+_idBenfeitoria).val(_valorDefault);		
 		}
 		
 		if(_isInsert){
-			inserirPagamentoBenfeitoria(_id, _idBenfeitoria, $('#data_pagto_'+ _id).val(),$('#valor_pagto_'+ _id).val());
+			inserirPagamentoBenfeitoria(_id, _idBenfeitoria, $('#data_pagto_'+ _id +'_'+_idBenfeitoria).val(),$('#valor_pagto_'+ _id +'_'+_idBenfeitoria).val());
 		} else {
-			atualizarPagamentoBenfeitoria(_id, _idBenfeitoria, $('#data_pagto_'+ _id).val(),$('#valor_pagto_'+ _id).val());
+			atualizarPagamentoBenfeitoria(_id, _idBenfeitoria, $('#data_pagto_'+ _id +'_'+_idBenfeitoria).val(),$('#valor_pagto_'+ _id +'_'+_idBenfeitoria).val());
 		}
 
 	} else {
 		
-		document.getElementById('linha_'+ _id).style.backgroundColor = '#fff';
-		document.getElementById('data_pagto_'+ _id).style.display = "none";
-		document.getElementById('valor_pagto_'+ _id).style.display = "none";
+		document.getElementById('linha_'+ _id +'_'+_idBenfeitoria).style.backgroundColor = '#fff';
+		document.getElementById('data_pagto_'+ _id +'_'+_idBenfeitoria).style.display = "none";
+		document.getElementById('valor_pagto_'+ _id +'_'+_idBenfeitoria).style.display = "none";
 		
 		excluirPagamentoBenfeitoria(_id, _idBenfeitoria);
 
