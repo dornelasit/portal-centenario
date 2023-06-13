@@ -68,7 +68,7 @@ $percent = ($qtdContribuintes / $qtdLotes) * 100;
 						<div class="card">
 							<div class="card-header border-0">
 								<div class="d-flex justify-content-between">
-									<h4 class="card-title">Dados dos &uacute;ltimos 12 meses:</h4>
+									<h4 class="card-title">Dados de todos os meses:</h4>
 								</div>
 							</div>
 							<div class="card-body">

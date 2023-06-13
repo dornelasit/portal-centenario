@@ -299,7 +299,7 @@ class FinanceiroDAO extends DAO {
             
             $dadosReceita = array();
             $pdo = self::obterConexaoBaseDados();
-            $sql = "SELECT date_format(mes_ano_referencia, '%m/%Y') AS competencia, SUM(valor_receita) AS total_receita FROM fi_receita GROUP BY mes_ano_referencia LIMIT 12";
+            $sql = "SELECT date_format(mes_ano_referencia, '%m/%Y') AS competencia, SUM(valor_receita) AS total_receita FROM fi_receita GROUP BY mes_ano_referencia";
             $stm = $pdo->query($sql);
             if ($stm->rowCount() > 0) {
                 while ($linha = $stm->fetch(PDO::FETCH_ASSOC)) {
@@ -313,7 +313,7 @@ class FinanceiroDAO extends DAO {
             
             $dadosDespesa = array();
             $pdo = self::obterConexaoBaseDados();
-            $sql = "SELECT date_format(mes_ano_referencia, '%m/%Y') AS competencia, SUM(valor_despesa) AS total_despesa FROM fi_despesa GROUP BY mes_ano_referencia LIMIT 12";
+            $sql = "SELECT date_format(mes_ano_referencia, '%m/%Y') AS competencia, SUM(valor_despesa) AS total_despesa FROM fi_despesa GROUP BY mes_ano_referencia";
             $stm = $pdo->query($sql);
             if ($stm->rowCount() > 0) {
                 while ($linha = $stm->fetch(PDO::FETCH_ASSOC)) {
