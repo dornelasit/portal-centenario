@@ -73,6 +73,8 @@ class UsuarioDAO extends DAO {
     public function inserirUsuario($email, $senha, $nome, $lote = null, $celular){
         
         try {
+
+            $senha = hash("md5", $senha);
             
             if(!isset($lote) || empty($lote)){
                 $lote = 0;
