@@ -3,6 +3,10 @@ include_once 'template.php';
 require_once 'classes/application_config.php';
 require_once 'classes/dao/FinanceiroDAO.php';
 
+$mesAnterior = new DateTime('now');
+$mesAnterior->modify('first day of previous month');
+$mesAnterior = $mesAnterior->format('m/Y');
+
 $mesAtual = new DateTime('now');
 $mesAtual = $mesAtual->format('m/Y');
 
@@ -11,6 +15,7 @@ $proximoMes->modify('first day of next month');
 $proximoMes = $proximoMes->format('m/Y');
 
 $competencias = array();
+$competencias[] = $mesAnterior;
 $competencias[] = $mesAtual;
 $competencias[] = $proximoMes;
 

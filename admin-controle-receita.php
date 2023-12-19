@@ -6,6 +6,10 @@ require_once 'classes/dao/ParametroDAO.php';
 
 $valorDefault = ParametroDAO::getInstancia()->obterValorParametro("VALOR_CONTRIBUICAO");
 
+$mesAnterior = new DateTime('now');
+$mesAnterior->modify('first day of previous month');
+$mesAnterior = $mesAnterior->format('m/Y');
+
 $mesAtual = new DateTime('now');
 $mesAtual = $mesAtual->format('m/Y');
 
@@ -14,6 +18,7 @@ $proximoMes->modify('first day of next month');
 $proximoMes = $proximoMes->format('m/Y');
 
 $competencias = array();
+$competencias[] = $mesAnterior;
 $competencias[] = $mesAtual;
 $competencias[] = $proximoMes;
 

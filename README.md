@@ -17,4 +17,7 @@ Portal Web para os moradores do bairro Jd Centenário
 	
 	@since 1.2_2:    
         @version : 13/06/2023 - Ajuste tela de transparencia exibindo somente 12 meses e não os ultimos 12 meses. Ajustado para retornar todos os registros
+
+	@since 1.2_4:    
+        @version : 19/12/2023 - Deixar o mês anterior nos combos de competência também 
 	
