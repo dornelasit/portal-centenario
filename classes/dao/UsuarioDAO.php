@@ -132,6 +132,8 @@ class UsuarioDAO extends DAO {
 
         try {
             
+            $novaSenha = hash("md5", $novaSenha);
+
             $pdo = self::obterConexaoBaseDados();
             
             $sql = "UPDATE usuario SET senha = '{$novaSenha}' WHERE id = {$id} ";
