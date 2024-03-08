@@ -60,7 +60,7 @@ class NoticiaDAO extends DAO {
             
             $pdo = self::obterConexaoBaseDados();
             
-            $sql = "SELECT id, titulo, conteudo, date_format(data_noticia,'%d/%m/%Y - %T') AS data_noticia, url_foto_noticia FROM noticia ORDER BY data_noticia DESC LIMIT 30";
+            $sql = "SELECT id, titulo, conteudo, date_format(data_noticia,'%d/%m/%Y - %T') AS data_noticia, url_foto_noticia FROM noticia ORDER BY id DESC LIMIT 30";
             
             $stm = $pdo->query($sql);
             
