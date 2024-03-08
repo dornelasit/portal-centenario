@@ -20,4 +20,9 @@ Portal Web para os moradores do bairro Jd Centenário
 
 	@since 1.2_4:    
         @version : 19/12/2023 - Deixar o mês anterior nos combos de competência também 
-	
+		
+	@since 1.2_5:    
+        @version : 15/01/2024 - Ajuste bug - Modificar senha nao criptografava
+
+	@since 1.2_6:    
+        @version : 08/03/2024 - Inclusao banner e noticia reuniao nova associacao e correcao da ordem de exibicao das noticias
