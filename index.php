@@ -40,17 +40,17 @@
         				</div>
 
                         <div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="1" style="width: 1132px; margin-right: 30px;">
-                            <a href='noticia-page?id=1'>
+                            <a href='noticia-page?id=5'>
                                 <img src="img/banner/banner3.jpg" class="img-responsive">
                             </a>
 						</div>
                         <div class="swiper-slide text-center swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 1132px; margin-right: 30px;">
-                            <a href='noticia-page?id=1'>    
+                            <a href='noticia-page?id=5'>    
                                 <img src="img/banner/banner3.jpg" class="img-responsive">
                             </a>
                         </div>
         				<div class="swiper-slide text-center swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="0" style="width: 1132px; margin-right: 30px;">
-                            <a href='noticia-page?id=1'>    
+                            <a href='noticia-page?id=5'>    
                                 <img src="img/banner/banner3.jpg" class="img-responsive">
                             </a>
         				</div>
